@@ -1,0 +1,12 @@
+test
+Alien
+1
+1
+1
+Forgeron
+13
+13
+3
+11
+0
+0

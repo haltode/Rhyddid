@@ -1,0 +1,6 @@
+Pour m'acheter une potion il suffit d'entrer : nombre_de_potion nom_potion niveau_de_la_potion
+
+Exemple pour acheter 2 potions de sante de niveau 2 :
+
+2 sante 2
+

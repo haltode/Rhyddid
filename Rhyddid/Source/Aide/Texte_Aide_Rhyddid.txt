@@ -1,0 +1,195 @@
+Rhyddid est un rogue-like, dans lequel vous incarnez un personnage dont vous 
+choississez la race et le metier. Vous traversez les niveaux, en combattant et 
+en decouvrant des objets (armes, armures tresors). Chaque niveau possede une cle
+pour acceder au niveau suivant, cette cle se trouve aleatoirement sur le niveau 
+bien gardee par l'un des ennemis. Chaque niveau est compose de 9 salles, toutes
+differentes et contenant des coffres, des ennemis et meme une caverne si vous
+etes chanceux...
+
+SE DEPLACER DANS LES MENUS
+
+Pour vous deplacer dans les menus il faut utiliser les chiffres, pour revenir en
+arriere tapez -1, pour quitter le jeu tapez 0.
+
+MENU PRINCIPAL
+
+Le menu principal est compose de 4 sous-menus :
+
+	- Sauvegarde : permet de gerer vos sauvegardes (creer, charger, supprimer).
+	- Highscore : permet de consulter votre top 10 de vos performances.
+	- Aide : permet d'acceder a ce texte, c'est une aide complete.
+	- Quitter : permet de quitter le jeu.
+	
+SAUVEGARDE
+
+Le menu Sauvegarde est compose de 3 sauvegardes au maximum, vous pouvez creer
+une nouvelle partie en selectionnant un espace de sauvegarde vide, vous pouvez
+charger et supprimer une sauvegarde en selectionnant une sauvegarde non vide.
+
+HIGHSCORE
+
+Le highscore presente une liste de vos 10 meilleures performances en indiquant
+pour chacune le nom de la partie, la race du joueur, le metier du joueur, le lvl
+du joueur, et le dernier niveau atteint par le joueur.
+
+AIDE
+
+L'aide vous sera tres precieuse au debut du jeu pour bien comprendre, je vous
+conseille de la lire au moins une fois ;)
+
+NOUVELLE PARTIE
+
+Pour creer une nouvelle partie, selectionnez un espace de sauvegarde vide,
+entrez un nom de personnage, choississez la race de votre nouveau personnage 
+(vous pouvez aussi visualiser les races, ce qui vous permet de voir ses
+caracteristiques ainsi qu'un ASCII Art), puis choississez un metier (chaque
+metier vous apporte des competences supplementaires a votre personnage). Un
+texte vous expliquant l'histoire de Rhyddid apparait.
+
+JEU
+
+Apres avoir charger ou creer une partie, vous verrez le jeu. En haut a gauche se
+situe la carte du niveau (le "E" indique l'entree, le "S" indique la sortie, le
+"X" indique votre position), la carte est composee de 9 carres representant
+chacun une salle. A droite de la carte se trouve le resume de votre personnage
+indiquant le niveau actuel ou vous vous trouvez, son Lvl, son EXP, sa sante,
+ses degats, sa protection. En dessous, vous voyez la salle actuelle.
+
+TOUCHES
+
+Voici les differentes touches de Rhyddid :
+
+z = haut
+s = bas
+q = gauche
+d = droite
+
+n = sauvegarder et quitter
+m = sauvegarder
+
+ECHAP = pause
+
+e = inventaire
+
+t = attaquer ennemi
+
+h = potion de sante niveau I
+j = potion de force niveau I
+k = potion de resistance niveau I
+
+H = potion de sante niveau II
+J = potion de force niveau II
+K = potion de resistance niveau II
+
+BOUTIQUE
+
+Une boutique est mis a votre disposition, vous pouvez y acceder apres avoir
+passe la porte de sortie du niveau. La boutique vous permet d'acheter des
+potions et de vendre des tresors contre des teks (la monnaie de Rhyddid).
+
+Voici les prix des potions :
+
+potion de sante I -> 30 teks
+potion de force I -> 20 teks
+potion de resistance I -> 20 teks
+
+potion de sante II -> 70 teks
+potion de force II -> 60 teks
+potion de resistance II -> 60 teks
+
+CAVERNE
+
+Il se peut que vous trouviez une caverne dans un niveau, celle-ci contient
+soit des coffres, soit beaucoup d'ennemis ...
+
+Voici a quoi elle pourrait ressembler :
+
+   _| |_  
+ `/     \'
+  |     | 
+  |     | 
+ ,\_____/.
+
+ENNEMI
+
+Les ennemis ont une IA evolutive (en fonction du niveau dans lequel vous vous
+trouvez). Chaque ennemi a des caracteristiques differents (sante, degat, 
+protection), a partir d'un certain rayon de distance l'ennemi vous focus, et
+vous suit de maniere a vous tuer pendant un certain nombre de tour, apres il
+arrete de vous suivre. Un ennemi choisit aleatoirement dans tout le niveau porte
+la cle de fin de niveau, vous devez le tuer pour avoir la cle.
+
+COMBAT
+
+Pour attaquer un ennemi utiliser la touche 't'. Lorsque vous attaquez un ennemi
+la carte en haut a gauche se transforme en ASCII Art de l'ennemi et vous indique
+ses caracteristiques (sante, degat, protection).
+
+ARME
+
+Il existe 35 armes dans le jeu. Une arme se compose d'un nom, d'un nombre de
+degat, et d'un nombre representant la portee de l'arme.
+
+ARMURE
+
+Il existe 30 armures dans le jeu. Une armure se compose d'un nom, et d'un nombre 
+representant la protection.
+
+POTION
+
+Il existe 3 types de potions : potion de sante, force, resistance. Chacune
+affecte respectivement les caracteristiques du joueur : sante, degat, protection.
+Il y a 2 niveaux de potions : le niveau I et le niveau II. Voici les effets des
+potions :
+
+sante I -> 4 points de vie
+sante II -> 10 points de vie
+
+force I -> 4 points de degat pendant 5 tours
+force II -> 8 points de degat pendant 10 tours
+
+resistance I -> 3 point de resistance pendant 5 tours
+resistance II -> 7 point de resistance pendant 10 tours
+
+Vous ne pouvez pas utiliser plusieurs potions du meme type quand vous avez deja
+utiliser une potion de ce type et qu'elle n'a pas finis son effet.
+
+La potion de sante I necessite d'attendre 3 tours avant de reutiliser une potion
+de sante. La potion de sante II necessite d'attendre 8 tours avant de reutiliser
+une potion de sante.
+
+TRESOR
+
+Il existe 50 tresors dans le jeu. Un tresor se compose d'un nom, d'un nombre de
+tek correspondant au cout de la vente du tresor. Vous pouvez vendre vos tresors
+dans la boutique et ainsi obtenir des teks.
+
+CLE
+
+La cle de fin de niveau se trouve sur un ennemi dans le niveau, il faut tuer cet
+ennemi pour obtenir la cle. Une fois que vous avez la cle allez vers la sortie.
+Vous arriverez dans un nouveau niveau.
+
+EXP
+
+L'EXP est donne par un ennemi lorsque vous le tuer, au bout de 100 EXP vous
+augmenter de Lvl ce qui vous permet d'ameliorer une de vos caracteristiques
+(sante, degat, protection).
+
+COFFRE
+
+Les coffres sont places aleatoirement dans les salles, ils peuvent contenir des
+armes, des armures, des teks, des tresors, des potions. Ils peuvent etre vide, 
+ou meme pieges et dans ce cas un ennemi apparaitra.
+
+INVENTAIRE
+
+Votre inventaire est compose d'une arme, d'une armure, de potions, de tek, de 5 
+tresors au maximum.
+
+MORT
+
+Lorsque vous mourrez, vos statistiques sont conservees dans le highscore, et
+votre partie est supprimee.
+
+

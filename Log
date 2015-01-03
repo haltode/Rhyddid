@@ -1,0 +1,223 @@
+- Mardi 8 octobre 2013 22:26 : Debut du systeme de sauvegarde, affichage fait. Il
+faut encore regler lorsque la sauvegarde n'est pas vide de bien afficher tous
+les details (fichier detail dans le dossier sauvegarde).
+
+- Mercredi 9 octobre 2013 21:59 : Continuation du systeme de sauvegarde. TODO : 
+choisir une race lors de la creation d'un personnage, cree les fichiers necessaires
+pour une nouvelle partie, charger/supprimer une partie existante.
+
+- Samedi 12 octobre 2013 18:42 : Systeme de sauvegarde finis. TODO : metier et 
+indiquez les niveaux de sante, protection, degat par tour pour les races.
+
+- Samedi 12 octobre 2013 20:46 : Metiers finis + niveaux de sante, protection et
+degat par tour indiques pour toutes les races.
+
+- Dimanche 13 octobre 2013 18:35 : Ajout de la vie actuelle, niveau EXP actuel 
+et du LVL. Generation du niveau fait. TODO : Generation aleatoire d'ennemis et 
+de coffre (0 a 3 coffres par salle. 3 a 6 ennemies par salle). Deplacement + 
+gerer les touches
+
+- Lundi 14 octobre 2013 20:51 : Ajout de la carte en couleur. Generation des
+coffres et des ennemis aleatoires faite. Ajout de couleur sur le jeu.
+
+- Samedi 19 octobre 2013 15:56 : Systeme de generation de niveau finis (forme 
+des salles) + generation de coffre et d'ennemis aleatoire. Ligne de separation
+du texte. Demander comfirmation avant de supprimer partie.
+
+- Mardi 22 octobre 2013 12:32 : Creation fichier creerDossier.h. Systeme de 
+deplacement. 1 BUG
+
+- Jeudi 24 octobre 2013 11:41 : Systeme de sauvegarde de niveau commence. On 
+peut chager un niveau si ce n'est pas une nouvelle partie, et en generer un si
+c'est une nouvelle partie. TODO : faire le systeme de sauvegarde en plein jeu du
+niveau
+
+- Vendredi 25 octobre 2013 : Systeme de sauvegarder et quitter en plein jeu
+fini. Rajout de commentaire indiquant pour chaque fonction son but. TODO : on ne
+peut plus supprimer une partie a cause des nouveaux fichiers/dossiers.
+
+- Samedi 26 octobre 2013 : 1 bug fixe (voir bug numero 2). Remplacement de tous
+les strcpy/strcat par des sprintf. Ajout du menu principal.
+
+- Samedi 16 octobre  2013 : 1 bug fixe (voir bug numero 1). Bug decouvert et 
+fixe sur la carte du niveau. Ajout du changement de salle. Ajout de la zone de
+texte.
+
+- Dimanche 27 octobre 2013 12:23 : La variable personnage est desormais en 
+globale dans le fichier personnage.h (pour l'utiliser : inclure personnage.h et
+declarer extern Personnage personnage). Creation du menu pause. Probleme de 
+buffer regle.
+
+- Lundi 28 octobre 2013 13:38 : Modelisation des personnages en fonction de 4
+angles de vues (devant, derriere, gauche, droite). Systeme d'effet de 3D lors de
+la visualistion des personnages.
+
+- Mardi 29 octobre 2013 11:52 : Systeme d'inventaire finis.
+
+- Mardi 29 octobre 2013 13:51 : Ajout de l'unite de monnaie : tek
+
+- Mardi 29 octobre 2013 20:05 : Ajout de la boutique, achat de potion seulement.
+Map refaite.
+
+- Mercredi 30 octobre 2013 16:17 : Systeme de deplacement totalement refait. 
+Boutique finis. Modification de l'affichage de l'inventaire (affiche que ce que
+l'on possede a la place d'afficher "Rien").
+
+- Jeudi 31 octobre 2013 15:54 : IA des ennemis faite.
+
+- Jeudi 31 octobre 2013 20:55 : 3 bug fixes. On peut faire -1 ou 0 lorsque l'on
+selectionne une sauvegarde. Prise en compte de la protection du personnage lors
+d'une attaque d'un ennemi.
+
+- Dimanche 3 novembre 2013 12:13 : Ajout de l'attaque
+
+- Mardi 5 novembre 2013 21:14 : Ajout de l'utilisation de potion (seulement 
+sante pour le moment) TODO : verifier si on peut utiliser la potion, puis
+l'enlever de l'inventaire et commencer le prochain compte a rebour
+
+- Samedi 9 novembre 2013 16:38 : Utilisation des potions (sante, force, 
+resistance) fini.
+
+- Dimanche 10 novembre 2013 17:58 : ASCII Art de la porte d'entree. Tableau de
+structure pour tester les touches entrees. Verification de l'entree dans la 
+boutique.
+
+- Lundi 11 novembre 2013 13:03 : Commencement du systeme de coffre et de la base de
+donnees pour les objets. TODO : inventer les objets et finir le systeme de 
+coffre
+
+- Mardi 12 novembre 2013 21:42 : Continuation du systeme de coffre. TODO : 
+possibilites de prendre les objets dans le coffre. Inventer les objets.
+
+- Mercredi 13 novembre 2013 19:46 : Systeme de coffre finis. Possibilite de 
+ressortir du menu vente de la boutique via -1 ou 0.
+
+- Samedi 16 novembre 2013 14:04 : Preparation de la version Alpha. On peut 
+ecrire le nom de la potion de n'importe quelle maniere dans la boutique.
+
+- Samedi 16 novembre 2013 18:53 : Correction bug couleur Alpha. Delai en chaque
+"image" jamais pour Windows. Ajout de l'affichage de plusieurs choses en meme
+temps sur la zone d'info. Ajout de l'affichage des erreurs pour les potions.
+N'affiche rien si le seul contenu d'un coffre est des teks et qu'il y a 0 tek.
+
+------------------------------------ ALPHA -------------------------------------
+
+- Dimanche 17 novembre 2013 10:43 : Correction d'un futur bug pour les objets.
+Systeme de generation d'obstacle sur la map.
+
+- Dimanche 17 novembre 2013 16:58 : Decouverte d'un bug. Ajout de la cle de fin
+de niveau. La cle est donne par un ennemi choisis aleatoirement, il faut le tuer
+pour recuperer la cle. 1 bug fixe (voir bug numero 6)
+
+- Mardi 19 novembre 2013 18:22 : Ajout de coffre piege. N'affiche pas prendre le
+contenu d'un coffre s'il est vide.
+
+- Mercredi 20 novembre 2013 20:16 : Ajout des cavernes. TODO : tester les 
+cavernes, changer placerCaverneNouveauNiveau() : probabilite, indexSalle etc.
+Sortir des cavernes.
+
+- Jeudi 21 novembre 2013 21:14 : Continuation des cavernes (sortir de la caverne,
+ennemi dans la caverne, differentes directions pour l'entree, differentes formes
+de salles). Cavernes finis.
+
+- Samedi 23 novembre 2013 11:40 : Caverne totalement fini : correction de bug
+pour les coffres pieges. Changement de l'interface d'un coffre vide et du fait
+de prendre le coffre et de revenir en jeu directement.
+
+- Dimanche 24 novembre 2013 10:37 : Correction d'un bug lors des generations des
+cavernes. Ajout de l'affichage de l'effet d'une potion dans la barre en haut.
+Demande confirmation de quitter si on a pas sauvegarder. Rajout de quelques info
+pour les potions. Affiche les caracteristiques d'un ennemi lorsqu'on l'attaque.
+
+- Mardi 26 novembre 2013 19:12 : Affiche aussi les caracteristiques d'un ennemi
+danns une caverne. Met la vie d'un ennemi mort a 0. Systeme de lvl/exp fait. Les
+ennemis ne spwan plus sur les obstacles ou sur d'autre ennemis. Enleve le membre
+niveauEXP de la structure Personnage (inutile).
+
+- Mercredi 27 novembre 2013 18:08 : Ne pas pas se deplacer de 2 si il y a
+quelque chose de non franchissable a 1 de distance. Empeche de generer des 
+obstacles devant les entrees/sorties et les cavernes. Systeme de niveau infinis,
+lorsque l'on a la cle et que l'on atteint la sortie, on passe au prochain niveau.
+
+- Jeudi 28 novembre 2013 19:28 : On accede a la boutique seulement entre les 
+niveaux maintenant. Le fichier sauvegarde niveau_actuel.txt (/Niveau) est 
+desormais salle_actuelle.txt. Ajout de la mort. Commencement du systeme de 
+highscore.
+
+- Samedi 30 novembre 2013 12:56 : IA ennemi completement refait. Ajout de la 
+protection d'un ennemi. Systeme de Highscore finis. Affiche le nom de la partie
+en cours en haut. Affiche la vie en rouge si elle est inferieure a 3.
+
+- Lundi 2 decembre 2013 18:58 : La fonction appuyezEntree met un \n a la fin du 
+message. Inclue dossier.h directement dans creerDossier.h. Texte affiche au
+debut pour expliquer le contexte.
+
+- Mardi 3 decembre 2013 18:55 : Probabilite objet chance min toujours a 1. Ajout
+du metier Mineur. Ajout de 5 armes. Ajout de 10 armures.
+
+- Mercredi 4 decembre 2013 19:13 : Ajout de metiers (Laboureur, Bourreau, 
+Marechal, Charpentier, Marchand, Meunier, Boulanger, Boucher, Macon). Dossier de
+sauvegarde avec les droits dessus. Fonction fermerFichier + remplacement de tous
+les fclose par la fonction fermerFichier.
+
+- Samedi 7 decembre 2013 18:42 : Commencement de fixer les defines (tirerChance).
+Prix de la boutique. Effet potion et nombre de tour. Caverne. Exp drop.
+
+- Dimanche 8 decembre 2013 11:49 : Affiche les competences et les caracteristiques
+des objets que l'on a dans la barre d'info. Moins de coffre vide. Changement du
+systeme de tirage au hasard des objets pour un coffre. Objet fini (arme, armure,
+tresor). Bug sur les cavernes fixe. IA evolutive (vie, degat, protection, portee, 
+porteeFocus, nbTourFocus, nbTourAttendreFocus). Affiche le nombre de tek dans la
+boutique. Affichage de la map a gauche.
+
+- Mercredi 11 decembre 2013 20:33 : Debut du nettoyage (action, aide, arme, armure,
+attaque, boutique).
+
+- Jeudi 12 decembre 2013 21:07 : Nettoyage (caverne, chargerPartie,
+cle, coffre, couleur).
+
+- Samedi 14 decembre 2013 12:15 : Nettoyage (creerDossier, deplacement, dossier,
+ecranTitre, effacer).
+
+- Samedi 14 decembre 2013 17:20 : Nettoyage (ennemi, entree, fonctionsUtiles,
+highscore).
+
+- Dimanche 15 decembre 2013 11:23 : Nettoyage (inventaire, jeu, lireSansEntree,
+main, menu, menuPrincipal, metier).
+
+- Dimanche 15 decembre 2013 19:38 : Nettoyage (mourrir).
+
+- Lundi 16 decembre 2013 20:12 : Nettoyage (niveau).
+
+- Mardi 17 decembre 2013 20:54 : Nettoyage (nouvellePartie, pause, personnage,
+potion).
+
+- Jeudi 19 decembre 2013 8:36 : Nettoyage (quitter, race, sauvegarde, sortie,
+supprimerPartie, tek).
+
+- Jeudi 19 decembre 2013 20:31 : Nettoyage (touche, tresor).
+
+- Samedi 21 decembre 2013 11:48 : Nettoyage (#define compteur pour toutes les 
+boucles, tous les ++ et les -- sont devant les variables, init devient
+initialiser, tous les int sont en unsigned quand possible, choix devient
+choixJoueur, caracteristique_race est desormais un tableau static, correction
+bug, paremetre de ouvrirFichier et fermerFichier bon). Peut revenir en arriere
+dans le menu Sauvegarde. Nettoyage de fond (jusqu'a deplacement).
+
+- Dimanche 22 decembre 2013 8:28 : Nettoyage (verification extern Niveau, Inventaire,
+Personnage). Nettoyage (jusqu'a tresor). chargerPartie, supprimerPartie, nouvellePartie 
+-> sauvegarde. TAILLE_MAX est a 200 maintenant.
+
+- Samedi 28 decembre 2013 17:47 : Nettoyage fini.
+
+- Lundi 30 decembre 2013 21:09 : Optimisation de l'affichage du niveau.
+
+- Mardi 31 decembre 2013 11:05 : Optimisation de
+la map du niveau (maj seulement lors d'un changement de niveau). Optimisation de
+detection de nouveau lvl du joueur. Aide finis. Histoire de Rhyddid, plus ajout
+d'armure et de tresor en rapport avec l'histoire de Rhyddid.
+
+------------------------------------- BETA -------------------------------------
+
+- Jeudi 2 janvier 2014 11:10 : Correction d'un bug avec les cavernes, mis a jour de la 
+version Beta.

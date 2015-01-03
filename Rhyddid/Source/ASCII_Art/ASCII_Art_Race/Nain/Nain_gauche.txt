@@ -1,0 +1,11 @@
+      /--\          Taille : 1m20
+     /    \         Poids : 50kg
+     0    )         
+     <    |         Sante : 10
+     \____/         Protection : 7
+       _||_         Degat par tour : 6
+     /|____|
+    /_/ | |
+   {}   |_|
+       /__|
+       

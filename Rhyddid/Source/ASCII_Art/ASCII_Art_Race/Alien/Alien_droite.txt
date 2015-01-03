@@ -1,0 +1,13 @@
+       o        Taille : 1m90
+      _(_       Poids : 100kg
+     (  O     
+      \ =       Sante : 13
+       ""       Protection : 3
+      | | \     Degat par tour : 7
+      \_/ \\
+      / \  \\_
+      ||    \.=
+      ||
+      ||__
+      \---`
+ 
