@@ -1,5 +1,6 @@
 # Rhyddid
 
+*Date du projet : Octobre 2013 à Janvier 2014*
 
 Rhyddid est un rogue-like, dans lequel vous incarnez un personnage dont vous choisissez la race et le métier. Vous traversez les niveaux, en combattant et  en découvrant des objets (armes, armures, trésors). Chaque niveau possède une clé pour accéder au niveau suivant, cette clé se trouve aléatoirement sur le niveau bien gardée par l'un des ennemis. Chaque niveau est composé de 9 salles, toutes différentes et contenant des coffres, des ennemis et même une caverne si vous êtes chanceux...
 
