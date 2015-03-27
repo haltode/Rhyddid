@@ -25,23 +25,17 @@ struct Highscore
 
 /* ----- Prototype ----- */
 
-/* Lit le fichier "Highscore.txt" et le charge dans la structure Highscore */
 void lireInformationHighscore(FILE *fichierHighscore, Highscore baseHighscore[NB_HIGHSCORE]);
-/* Ecrit dans le fichier "Highscore.txt" la structure Highscore */
 void ecrireInformationHighscore(FILE *fichier, const Highscore baseHighscore[NB_HIGHSCORE]);
 
 
-/* Affiche individuellement un highscore */
 void afficherHighscoreIndividuel(const Highscore *baseHighscore);
-/* Affiche le highscore en entier */
 void afficherHighscore(void);
 
 
-/* Ajoute une sauvegarde au highscore */
 void ajouterHighscore(void);
 
 
-/* Affiche le highscore et retourne au menu principal */
 void highscore(void);
 
 /* ----- Declaration ----- */

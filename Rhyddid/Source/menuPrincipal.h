@@ -15,13 +15,10 @@
 
 /* ----- Prototype ----- */
 
-/* Affiche le menu principal */
 void afficherMenuPrincipal(void);
-/* Menu principal */
 void menuPrincipal(void);
 
 
-/* Reviens au menu principal lorsque le jeu est en pause */
 void revenirMenuPrincipal(void);
 
 /* ----- Declaration ----- */

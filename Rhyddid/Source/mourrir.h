@@ -14,7 +14,6 @@
 
 /* ----- Prototype ----- */
 
-/* Fait mourrir le joueur */
 void mourrir(void);
 
 /* ----- Declaration ----- */

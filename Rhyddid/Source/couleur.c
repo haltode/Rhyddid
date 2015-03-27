@@ -3,7 +3,6 @@
 #include "couleur.h"
 #include "fonctionsUtiles.h"
 
-/* Initialisaiton la couleur de la sortie a typeCouleur */
 void couleur(const unsigned int typeCouleur)
 {
 	#ifdef __WIN32__
@@ -17,7 +16,6 @@ void couleur(const unsigned int typeCouleur)
 	
 }
 
-/* Fonction qui affiche le texte donne en parametre en couleur donne en parametre */
 void coloration(const char *texte, const unsigned int typeCouleur)
 {
 	couleur(typeCouleur);
@@ -25,7 +23,6 @@ void coloration(const char *texte, const unsigned int typeCouleur)
 	couleur(BLANC);
 }
 
-/* Fonction qui affiche le caractere donne en parametre en couleur donne en parametre */
 void colorationCaractere(const char caractere, const unsigned int typeCouleur)
 {
 	couleur(typeCouleur);

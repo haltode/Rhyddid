@@ -14,9 +14,7 @@
 
 /* ----- Prototype ----- */
 
-/* Permet de reprendre la partie en cours */
 void reprendrePartie(void);
-/* Menu pause */
 void menuPause(void);
 
 /* ----- Declaration ----- */

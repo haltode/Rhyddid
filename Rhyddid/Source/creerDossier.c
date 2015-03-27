@@ -3,12 +3,8 @@
 #include "creerDossier.h"
 #include "dossier.h"
 
-/* Cree un nouveau dossier du nom donne en parametre */
 void creerNouveauDossier(const char *nom)
 {
-	/* Si le joueur est sous windows il suffit juste de creer le dossier avec mkdir sinon il
-	faut le creer et donner les droits au joueur */
-
 	#ifdef __WIN32__
 		mkdir(nom);
 	#elif __APPLE__

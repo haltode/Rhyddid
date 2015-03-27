@@ -26,21 +26,14 @@ struct Arme
 
 /* ----- Prototype ----- */
 
-/* Initialise l'arme de l'inventaire dans le fichier Inventaire/arme.txt */
 void initialiserArmeInventaire(void);
-/* Charge l'arme de l'inventaire grace au fichier Inventaire/arme.txt */
 void chargerArmeInventaire(void);
-/* Sauvegarde l'arme de l'inventaire dans le fichier Inventaire/arme.txt */
 void sauvegarderArmeInventaire(void);
-/* Affiche la section Arme de l'inventaire lorsqu'on ouvre l'inventaire */
 void afficherArmeInventaire(void);
 
 
-/* Genere une arme au hasard situee dans un coffre */
 void genererArmeCoffre(Arme *arme);
-/* Affiche la section Arme d'un coffre lorsqu'on l'ouvre */
 void afficherArmeCoffre(const Coffre *coffre);
-/* Prend l'arme situee dans le coffre que le joueur vient d'ouvrir */
 void prendreArmeCoffre(const Arme *arme);
 
 /* ----- Declaration ----- */

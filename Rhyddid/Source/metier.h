@@ -21,11 +21,9 @@ struct Metier
 
 /* ----- Prototype ----- */
 
-/* Demande le metier du nouveau personnage */
 void demanderMetierNouveauPersonnage(void);
 
 
-/* Affiche tous les differents metiers */
 void afficherDifferentMetier(void);
 
 /* ----- Declaration ----- */

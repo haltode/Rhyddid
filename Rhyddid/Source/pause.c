@@ -8,14 +8,11 @@
 #include "menuPrincipal.h"
 #include "fonctionsUtiles.h"
 
-/* Permet de reprendre la partie en cours */
 void reprendrePartie(void)
 {
-	/* Pour reprendre la partie en cours il suffit juste de ne rien faire */
 	return ;
 }
 
-/* Menu pause */
 void menuPause(void)
 {
 	Menu pause;
@@ -23,9 +20,6 @@ void menuPause(void)
 	effacer();
 	titre("Pause", VERT);
 
-	/* On cree un menu pause contenant chaque choix possible, on demande au joueur son choix
-	et on le fait */
-	
 	menuNouveau(&pause);
 
 	menuAjouter(&pause, reprendrePartie, "Reprendre partie");

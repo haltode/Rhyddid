@@ -6,7 +6,6 @@
 #include "fonctionsUtiles.h"
 #include "menuPrincipal.h"
 
-/* Affiche un element de la legende de l'aide */
 void afficherElementLegendeAide(const char caractere, 
 	const unsigned int couleurCaractere, const char *message)
 {
@@ -15,7 +14,6 @@ void afficherElementLegendeAide(const char caractere,
 	printf(" : %s\n", message);
 }
 
-/* Affiche la legende de l'aide */
 void afficherLegendeAide(void)
 {
 	printf("Legende : \n\n");
@@ -36,7 +34,6 @@ void afficherLegendeAide(void)
 
 }
 
-/* Affiche l'aide de Rhyddid */
 void afficherAide(void)
 {
 	afficherLegendeAide();
@@ -45,7 +42,6 @@ void afficherAide(void)
 	lireEtAfficher("Aide/Texte_Aide_Rhyddid.txt");
 }
 
-/* Menu Aide */
 void aide(void)
 {
 	effacer();

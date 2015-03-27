@@ -29,26 +29,17 @@ struct Tek
 
 /* ----- Prototype ----- */
 
-/* Initialise les teks de l'inventaire dans le fichier Inventaire/tek.txt */
 void initialiserTekInventaire(void);
-/* Charge les teks de l'inventaire dans le fichier Inventaire/tek.txt */
 void chargerTekInventaire(void);
-/* Sauvegarde les teks de l'inventaire dans le fichier Inventaire/tek.txt */
 void sauvegarderTekInventaire(void);
-/* Affiche la section Tek de l'inventaire lorsqu'on ouvre l'inventaire */
 void afficherTekInventaire(void);
 
 
-/* Ajoute nbTek a l'inventaire du joueur */
 void ajouterTekInventaire(const unsigned int nbTek);
-/* Enleve nbTek a l'inventaire du joueur */
 void enleverTekInventaire(const unsigned int nbTek);
 
-/* Genere des teks au hasard situes dans un coffre */
 void genererTekCoffre(Tek *tek);
-/* Affiche la section Tek d'un coffre lorsqu'on l'ouvre */
 void afficherTekCoffre(const Coffre *coffre);
-/* Prend les teks situes dans le coffre que le joueur vient d'ouvrir (donne en parametre) */
 void prendreTekCoffre(const Tek *tek);
 
 /* ----- Declaration ----- */

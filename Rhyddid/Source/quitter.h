@@ -14,7 +14,6 @@
 
 /* ----- Prototype ----- */
 
-/* Quitte le jeu */
 void quitter(void);
 
 /* ----- Declaration ----- */

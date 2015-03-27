@@ -8,7 +8,6 @@
 #include "fonctionsUtiles.h"
 #include "personnage.h"
 
-/* Demande le metier du nouveau personnage */
 void demanderMetierNouveauPersonnage(void)
 {
 	static const Metier baseTypeMetier[NB_METIER] = 
@@ -34,13 +33,9 @@ void demanderMetierNouveauPersonnage(void)
 	effacer();
 	titre("Nouvelle Partie", VERT);
 
-	/* On affiche les differents metiers et on demande au joueur son choix */
-
 	printf("Quel metier voulez-vous choisir ?\n\n");
 	afficherDifferentMetier();
 	choixJoueur = choisirMenuSansOperationPossible(NB_METIER);
-
-	/* On enregistre son choix et on ajoute les caracteristiques du metier au joueur */
 
 	strcpy(personnage.metier, baseTypeMetier[choixJoueur - 1].nomMetier);
 	personnage.sante += baseTypeMetier[choixJoueur - 1].sante;
@@ -48,12 +43,9 @@ void demanderMetierNouveauPersonnage(void)
 	personnage.degatParTour += baseTypeMetier[choixJoueur - 1].degatParTour;
 }
 
-/* Affiche tous les differents metiers */
 void afficherDifferentMetier(void)
 {
 	Menu metier;
-
-	/* On cree un menu contenant chaque metier et on l'affiche */
 
 	menuNouveau(&metier);
 

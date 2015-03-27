@@ -4,7 +4,6 @@
 #include "quitter.h"
 #include "fonctionsUtiles.h"
 
-/* Quitte le jeu */
 void quitter(void)
 {
 	separationTexte();

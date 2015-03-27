@@ -5,12 +5,10 @@
 #include "fonctionsUtiles.h"
 #include "effacer.h"
 
-/* Affiche l'ecran titre du jeu */
 void afficherEcranTitre(void)
 {
 	effacer();
 
-	/* On affiche le ASCII Art */
 	couleur(VERT);
 	lireEtAfficher("ASCII_Art/ASCII_Art_Ecran_Titre.txt");
 	couleur(BLANC);

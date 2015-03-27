@@ -14,7 +14,6 @@
 
 /* ----- Prototype ----- */
 
-/* Affiche un texte lorsque le joueur se trouve sur la porte de la sortie */
 void afficherTextePorteSortie(void);
 
 /* ----- Declaration ----- */

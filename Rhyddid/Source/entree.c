@@ -5,7 +5,6 @@
 #include "couleur.h"
 #include "fonctionsUtiles.h"
 
-/* Affiche le texte de la porte d'entree du niveau */
 void afficherTextePorteEntree(void)
 {
 	effacer();

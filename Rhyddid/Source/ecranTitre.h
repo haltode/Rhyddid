@@ -14,7 +14,6 @@
 
 /* ----- Prototype ----- */
 
-/* Affiche l'ecran titre du jeu */
 void afficherEcranTitre(void);
 
 /* ----- Declaration ----- */

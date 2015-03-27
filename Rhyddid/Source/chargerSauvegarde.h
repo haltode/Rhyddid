@@ -14,7 +14,6 @@
 
 /* ----- Prototype ----- */
 
-/* Charge une sauvegarde nomPartie (recupere toutes les infos du personnage), puis lance le jeu */
 void chargerSauvegarde(const char *nomSauvegarde);
 
 /* ----- Declaration ----- */

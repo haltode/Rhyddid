@@ -14,7 +14,6 @@
 
 /* ----- Prototype ----- */
 
-/* Affiche le texte de la porte d'entree du niveau */
 void afficherTextePorteEntree(void);
 
 /* ----- Declaration ----- */

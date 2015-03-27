@@ -34,21 +34,15 @@ struct Inventaire
 
 /* ----- Prototype ----- */
 
-/* Affiche l'inventaire du joueur */
 void afficherInventaire(void);
-/* Ouvre l'inventaire du joueur */
 void ouvrirInventaire(void);
 
 
-/* Cree le dossier de sauvegarde Inventaire du joueur */
 void creerNouveauDossierInventaire(void);
 
 
-/* Initialise l'inventaire du joueur */
 void initialiserInventaire(void);
-/* Charge l'inventaire du joueur */
 void chargerInventaire(void);
-/* Sauvegarde l'inventaire du joueur */
 void sauvegarderInventaire(void);
 
 /* ----- Declaration ----- */

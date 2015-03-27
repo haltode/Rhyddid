@@ -7,7 +7,6 @@
 #include "couleur.h"
 #include "coffre.h"
 
-/* Initialise les tresors de l'inventaire dans le fichier Inventaire/tresor.txt */
 void initialiserTresorInventaire(void)
 {
 	FILE *fichierTresor;
@@ -16,11 +15,8 @@ void initialiserTresorInventaire(void)
 
 	sprintf(chemin, "Sauvegarde/%s/Inventaire/tresor.txt", personnage.nom);
 
-	/* On ouvre le fichier Inventaire/tresor.txt */
 	fichierTresor = ouvrirFichier(chemin, "w+",
 	"fichier \"armure.txt\", fonction \"initialiserTresorInventaire\"");
-
-	/* On ecrit les donnees des tresors de base avec le nom, et le cout (pour les NB_TRESOR_MAX) */
 
 	for(indexTresor = 0; indexTresor < NB_TRESOR_MAX; ++indexTresor)
 	{
@@ -30,12 +26,10 @@ void initialiserTresorInventaire(void)
 
 	fprintf(fichierTresor, "0\n");
 
-	/* On ferme le fichier Inventaire/tresor.txt */
 	fermerFichier(fichierTresor,
 	"fichier \"armure.txt\", fonction \"initialiserTresorInventaire\"");
 }
 
-/* Charge les tresors de l'inventaire dans le fichier Inventaire/tresor.txt */
 void chargerTresorInventaire(void)
 {
 	FILE *fichierTresor;
@@ -44,11 +38,8 @@ void chargerTresorInventaire(void)
 
 	sprintf(chemin, "Sauvegarde/%s/Inventaire/tresor.txt", personnage.nom);
 
-	/* On ouvre le fichier Inventaire/tresor.txt */
 	fichierTresor = ouvrirFichier(chemin, "r",
 	"fichier \"armure.txt\", fonction \"chargerTresorInventaire\"");
-
-	/* On lit les donnees des tresors avec le nom, et le cout (pour les NB_TRESOR_MAX) */
 
 	for(indexTresor = 0; indexTresor < NB_TRESOR_MAX; ++indexTresor)
 	{
@@ -58,12 +49,10 @@ void chargerTresorInventaire(void)
 
 	fscanf(fichierTresor, "%d\n", &(inventaire.tresorActuel));
 
-	/* On ferme le fichier Inventaire/tresor.txt */
 	fermerFichier(fichierTresor,
 	"fichier \"armure.txt\", fonction \"chargerTresorInventaire\"");
 }
 
-/* Sauvegarde les tresors de l'inventaire dans le fichier Inventaire/tresor.txt */
 void sauvegarderTresorInventaire(void)
 {
 	FILE *fichierTresor;
@@ -72,11 +61,8 @@ void sauvegarderTresorInventaire(void)
 
 	sprintf(chemin, "Sauvegarde/%s/Inventaire/tresor.txt", personnage.nom);
 
-	/* On ouvre le fichier Inventaire/tresor.txt */
 	fichierTresor = ouvrirFichier(chemin, "w+",
 	"fichier \"armure.txt\", fonction \"sauvegarderTresorInventaire\"");
-
-	/* On ecrit les donnees des tresors avec le nom, et le cout (pour les NB_TRESOR_MAX) */
 
 	for(indexTresor = 0; indexTresor < NB_TRESOR_MAX; ++indexTresor)
 	{
@@ -86,13 +72,10 @@ void sauvegarderTresorInventaire(void)
 
 	fprintf(fichierTresor, "%d\n", inventaire.tresorActuel);
 
-	/* On ferme le fichier Inventaire/tresor.txt */
 	fermerFichier(fichierTresor,
 	"fichier \"armure.txt\", fonction \"sauvegarderTresorInventaire\"");
 }
 
-/* Affiche une partie individuelle de la section Tresor de l'inventaire lorsqu'on ouvre 
-l'inventaire */
 void afficherTresorIndividuelInventaire(const unsigned int indexTresor)
 {
 	coloration(inventaire.tresor[indexTresor].nom, BLEU);
@@ -103,12 +86,9 @@ void afficherTresorIndividuelInventaire(const unsigned int indexTresor)
 	printf("tek");
 }
 
-/* Affiche la section Tresor de l'inventaire lorsqu'on ouvre l'inventaire */
 void afficherTresorInventaire(void)
 {
 	compteur indexTresor;
-
-	/* On affiche seulement les tresors que possedent le joueur */
 
 	coloration("Tresor", VERT);
 	printf(" : \n\n");
@@ -134,11 +114,10 @@ void afficherTresorInventaire(void)
 	printf("\n\n");
 }
 
-/* Genere un tresor au hasard situe dans un coffre */
 void genererTresorCoffre(Tresor *tresor)
 {
 	/* Pour generer un tresor au hasard, on utilise la base de donnees baseTresor, on tire un 
-	index au hasard, on fait un teste pour savoir si on peut avoir le tresor situe a l'index 
+	index au hasard, on fait un test pour savoir si on peut avoir le tresor situe a l'index 
 	(1 chance sur x, x ici est l'index precedemment tire), si on reussi alors on copie toutes 
 	les donnes dans la variable tresor donnee en parametre, sinon on copie les donnees du tresor
 	le moins precieux situe a l'index 0 du tableau baseTresor */
@@ -199,26 +178,20 @@ void genererTresorCoffre(Tresor *tresor)
 	};
 	unsigned int indexTresor;
 
-	/* On tire un nombre au hasard entre 1 et NB_TRESOR - 1 */
 	indexTresor = hasard(1, NB_TRESOR - 1);
 
-	/* On fait le test 1 chance sur indexTresor */
 	if(tirerChance(1, indexTresor))
 	{
-		/* Si on reussi le test, on copie les donnees (nom, cout) du tresor situe a l'index 
-		indexTresor */
 		strcpy(tresor->nom, baseTresor[indexTresor].nom);
 		tresor->cout = baseTresor[indexTresor].cout;
 	}
 	else
 	{
-		/* Sinon on copie les donnees (nom, cout) du tresor le moins precieux situe a l'index 0 */
 		strcpy(tresor->nom, baseTresor[0].nom);
 		tresor->cout = baseTresor[0].cout;
 	}
 }
 
-/* Affiche la section Tresor d'un coffre lorsqu'on l'ouvre */
 void afficherTresorCoffre(const Coffre *coffre)
 {
 	coloration("Tresor", VERT);
@@ -234,62 +207,42 @@ void afficherTresorCoffre(const Coffre *coffre)
 	putchar('\n');
 }
 
-/* Prend le tresor situe dans le coffre que le joueur vient d'ouvrir (donne en parametre) */
 void prendreTresorCoffre(const Tresor *tresor)
 {
-	/* Si le joueur n'a plus de place, car il a atteint le nombre de max de tresor qu'il peut
-	transporter */
 	if(inventaire.tresorActuel == NB_TRESOR_MAX - 1)
 	{
-		/* On affiche un message d'erreur */
-
 		coloration("Vous avez trop de tresor sur vous, vous ne pouvez pas en prendre plus !\n", ROUGE);
 		coloration("Faites un tour a la boutique pour en vendre et gagner des teks. ;)\n\n", ROUGE);
 	}
-	/* Sinon */
 	else
 	{
-		/* On copie les donnes du tresor */
-
 		strcpy(inventaire.tresor[inventaire.tresorActuel].nom, tresor->nom);
 		inventaire.tresor[inventaire.tresorActuel].cout = tresor->cout;
-	
-		/* On incremente de 1 le tresorActuel */
 		++(inventaire.tresorActuel);
 	}
 }
 
-/* Renvoie 1 si le joueur possede au moins 1 tresor et 0 sinon */
 unsigned int joueurPossedeTresor(void)
 {
-	/* On renvoie 1 si le joueur possede au moins 1 tresor et 0 sinon */
 	return strcmp(inventaire.tresor[0].nom, "Rien") == 0;
 }
 
-/* Vend le tresor indexTresor */
 void vendreTresor(const unsigned int indexTresor)
 {
 	compteur indexTab;
 
-	/* On ajoute le nombre de tek que valait le tresor indexTresor que le joueur vient de 
-	vendre */
 	ajouterTekInventaire(inventaire.tresor[indexTresor].cout);
 
-	/* On affiche un message indiquant le gaint de tek */
 	printf("Vous avez gagne %d tek !\n", inventaire.tresor[indexTresor].cout);
 	printf("Vous avez %d tek.\n", inventaire.tek.nbTek);
 
-	/* On decale tous les tresors apres la vente */
 	for(indexTab = indexTresor; indexTab < NB_TRESOR_MAX - 1; ++indexTab)
 	{
 		strcpy(inventaire.tresor[indexTab].nom, inventaire.tresor[indexTab + 1].nom);
 		inventaire.tresor[indexTab].cout = inventaire.tresor[indexTab + 1].cout;
 	}
 
-	/* On met le tresor vendu a 0 */
 	strcpy(inventaire.tresor[inventaire.tresorActuel].nom, "Rien");
 	inventaire.tresor[inventaire.tresorActuel].cout = 0;
-
-	/* On decremente de 1 l'index correspondant au tresor actuel */
 	--(inventaire.tresorActuel);
 }

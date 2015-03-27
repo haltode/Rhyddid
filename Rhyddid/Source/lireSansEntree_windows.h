@@ -12,12 +12,10 @@
 
 /* ----- Prototype ----- */
 
-/* Lit une lettre sans appuyer sur ENTREE */
 char lireSansEntree(void);
 
 /* ----- Declaration ----- */
 
-/* Lit une lettre sans appuyer sur ENTREE */
 char lireSansEntree(void)
 {
 	char c;

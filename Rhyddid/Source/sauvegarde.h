@@ -23,26 +23,20 @@ enum actionSauvegarde
 
 /* ----- Prototype ----- */
 
-/* Recupere le nom des sauvegardes */
 void recupererNomSauvegarde(char baseNomSauvegarde[NB_SAUVEGARDE][TAILLE_MAX]);
 
 
-/* Recupere les informations du personnage nomPersonnage */
 void recupererInformationPersonnage(const char *nomPersonnage);
-/* Affiche les informations sur le personnage */
 void afficherInformationPersonnageSauvegarde(void);
 
 
-/* Affiche le menu sauvegarde */
 void afficherMenuSauvegarde(char baseNomSauvegarde[NB_SAUVEGARDE][TAILLE_MAX]);
 
 
-/* Permet de faire une action (charger ou supprimer) sur la sauvegarde indexSauvegarde */
 void actionSauvegarde(char baseNomSauvegarde[NB_SAUVEGARDE][TAILLE_MAX],
 	const unsigned int indexSauvegarde);
 
 
-/* Menu sauvegarde */
 void sauvegarde(void);
 
 /* ----- Declaration ----- */

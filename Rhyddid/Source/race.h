@@ -44,31 +44,22 @@ enum caracteristique
 
 /* ----- Prototype ----- */
 
-/* Renvoie le nom de la race correspondant a l'index indexRace */
 const char *recupererNomRace(const unsigned int indexRace);
-/* Renvoie l'index correspondant au nom de la race donne en parametre */
 unsigned int recupererIndexRace(const char *nomRace);
 
 
-/* Cree un menu contenant chaque race */
 void creerMenuRace(Menu *menu);
 
 
-/* Affiche la race donnee en parametre */
 void afficherRace(const char *nomRace);
 
 
-/* Permet de visualiser les differentes races */
 void visualiserRaceNouveauPersonnage(void);
-/* Permet de choisir une race */
 void choisirRaceNouveauPersonnage(void);
-/* Permet de choisir entre soit visualiser soit choisir une race */
 void choisirEtVisualiserRaceNouveauPersonnage(void);
-/* Demande la race du nouveau personnage */
 void demanderRaceNouveauPersonnage(void);
 
 
-/* Affecte les caracteristiques d'une race donnee en parametre au joueur */
 void affecterCaracteristiqueRace(void);
 
 /* ----- Declaration ----- */

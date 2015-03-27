@@ -14,7 +14,6 @@
 
 /* ----- Prototype ----- */
 
-/* Cree un nouveau dossier du nom donne en parametre */
 void creerNouveauDossier(const char *nom);
 
 /* ----- Declaration ----- */
